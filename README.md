@@ -9,9 +9,6 @@ It is supposed to run on qemu, and the example below is mainly for intel mac.
 # Install X11 to mac.
 $ brew install xquartz
 
-# If DISPLAY environment variable is not set
-$ export DISPLAY=:0.0
-
 # Add host for X11.
 $ xhost + 127.0.0.1
 
