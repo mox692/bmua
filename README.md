@@ -2,33 +2,35 @@
 A toy UEFI application.
 
 ## Setup Example
-For intel mac example.
+It is supposed to run on qemu, and the example below is mainly for intel mac.
 
-install XQuartz(X11).
-```
+#### install, setup XQuartz(X11).
+```bash
+# Install X11 to mac.
 $ brew install xquartz
-```
 
-
-Add host for X11.
-```
+# Add host for X11.
 $ xhost + 127.0.0.1
 ```
 
-Clone code, and enter the docker container.
+#### Clone code, and enter the docker container.
 ```
 $ git clone https://github.com/mox692/bmua && cd bmua
 
 $ make build && make run
 ```
 
-Inside container, build C source and run qemu.
-```
-$ make build
+#### Inside container, build C source and run qemu.
+```bash
 
-$ make img
+# build C source
+$ ~/bmua# make build
 
-$ make run
+# create disk image
+$ ~/bmua# make img
+
+# run qemu
+$ ~/bmua# make run
 ```
 
 ## Ref
